@@ -52,15 +52,30 @@ app.use(notFound)
 app.use(errorHandler)
 
 
-const PORT=process.env.PORT || 5000
-const server=app.listen(5000,console.log("Server Started on port 5000"));
-const io=require('socket.io')(server,{
-    pingTimeout:60000,
-    cors:{
-        origin:"http://localhost:3000"
-        }
+// const PORT=process.env.PORT || 5000
+// const server=app.listen(5000,console.log("Server Started on port 5000"));
+// const io=require('socket.io')(server,{
+//     pingTimeout:60000,
+//     cors:{
+//         origin:"http://localhost:3000"
+//         }
 
-})
+// })
+const PORT = process.env.PORT || 5000;
+
+const server = app.listen(PORT, () =>
+  console.log(`Server Started on port ${PORT}`)
+);
+
+const io = require("socket.io")(server, {
+  pingTimeout: 60000,
+  cors: {
+    origin: [
+      "http://localhost:3000",
+      "https://talkzone-dcbn.onrender.com"
+    ],
+  },
+});
 
 io.on("connection",(socket)=>{
     console.log("Connected to socket.io")
