@@ -1,4 +1,4 @@
-# Talk Zone 
+# Talk Zone
 
 A real-time group chat application that enables users to create and manage chat groups, exchange messages instantly, and maintain secure communication.
 
@@ -16,7 +16,6 @@ A real-time group chat application that enables users to create and manage chat 
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
 - **Real-time Communication**: WebSockets
-
 
 ## 🛠 Installation Guide
 
@@ -37,3 +36,30 @@ A real-time group chat application that enables users to create and manage chat 
    npm run dev
    ```
 
+Demo
+https://talkzone-dcbn.onrender.com/
+
+Features
+Authenticaton
+![alt text](image.png)![alt text](image-1.png)
+
+TalkZone Chat UI
+![alt text](image-3.png)![alt text](image-2.png)
+
+Notifications
+![alt text](image-4.png)
+Real Time Chatting with Typing indicators
+![alt text](image-5.png)
+Search Users
+![alt text](image-6.png)
+One to One chat
+![alt text](image-9.png)
+Create Group Chats
+![alt text](image-7.png)
+Add or Remove users from group
+![alt text](image-8.png)
+View Other user Profile
+![alt text](image-10.png)
+
+Made By
+@REETIKA KUMARI
