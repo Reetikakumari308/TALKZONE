@@ -36,30 +36,81 @@ A real-time group chat application that enables users to create and manage chat 
    npm run dev
    ```
 
-Demo
-https://talkzone-dcbn.onrender.com/
+## 🚀 Demo
 
-Features
-Authenticaton
-![alt text](image.png)![alt text](image-1.png)
+🔗 https://talkzone-dcbn.onrender.com/
 
-TalkZone Chat UI
-![alt text](image-3.png)![alt text](image-2.png)
+---
 
-Notifications
-![alt text](image-4.png)
-Real Time Chatting with Typing indicators
-![alt text](image-5.png)
-Search Users
-![alt text](image-6.png)
-One to One chat
-![alt text](image-9.png)
-Create Group Chats
-![alt text](image-7.png)
-Add or Remove users from group
-![alt text](image-8.png)
-View Other user Profile
-![alt text](image-10.png)
+## ✨ Features Showcase
 
-Made By
-@REETIKA KUMARI
+### 🔐 Authentication
+
+<p>
+  <img src="./screenshots/image.png" width="400"/>
+  <img src="./screenshots/image-1.png" width="400"/>
+</p>
+
+---
+
+### 💬 Chat Interface
+
+<p>
+  <img src="./screenshots/image-3.png" width="400"/>
+  <img src="./screenshots/image-2.png" width="400"/>
+</p>
+
+---
+
+### 🔔 Notifications
+
+<p>
+  <img src="./screenshots/image-4.png" width="400"/>
+</p>
+
+---
+
+### ⌨️ Real-Time Chat (Typing Indicator)
+
+<p>
+  <img src="./screenshots/image-5.png" width="400"/>
+</p>
+
+---
+
+### 🔍 Search Users
+
+<p>
+  <img src="./screenshots/image-6.png" width="400"/>
+</p>
+
+---
+
+### 👤 One-to-One Chat
+
+<p>
+  <img src="./screenshots/image-9.png" width="400"/>
+</p>
+
+---
+
+### 👥 Group Chat
+
+<p>
+  <img src="./screenshots/image-7.png" width="400"/>
+  <img src="./screenshots/image-8.png" width="400"/>
+</p>
+
+---
+
+### 👀 User Profile
+
+<p>
+  <img src="./screenshots/image-10.png" width="400"/>
+</p>
+
+---
+
+## 👩‍💻 Made By
+
+**Reetika Kumari**
