@@ -32,7 +32,12 @@ const Login = () => {
         },
 
       };
-      const { data } = await axios.post("http://localhost:5000/api/user/login", { email, password }, config);
+      // const { data } = await axios.post("http://localhost:5000/api/user/login", { email, password }, config);
+      const { data } = await axios.post(
+  "https://talkzone-dcbn.onrender.com/api/user/login",
+  { email, password },
+  config
+);
      localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false)
       toast({

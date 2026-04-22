@@ -49,10 +49,15 @@ const GroupChatModal = ({ children }) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
+      // const { data } = await axios.get(
+      //   `http://localhost:5000/api/user?search=${query}`,
+      //   config
+      // );
       const { data } = await axios.get(
-        `http://localhost:5000/api/user?search=${query}`,
-        config
-      );
+  `https://talkzone-dcbn.onrender.com/api/user?search=${query}`,
+  config
+);
+
       setSearchResult(data);
       setLoading(false);
     } catch (err) {
@@ -84,14 +89,22 @@ const GroupChatModal = ({ children }) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
+      // const { data } = await axios.post(
+      //   'http://localhost:5000/api/chat/group',
+      //   {
+      //     name: groupChatName,
+      //     users: JSON.stringify(selectedUsers.map((u) => u._id)),
+      //   },
+      //   config
+      // );
       const { data } = await axios.post(
-        'http://localhost:5000/api/chat/group',
-        {
-          name: groupChatName,
-          users: JSON.stringify(selectedUsers.map((u) => u._id)),
-        },
-        config
-      );
+  'https://talkzone-dcbn.onrender.com/api/chat/group',
+  {
+    name: groupChatName,
+    users: JSON.stringify(selectedUsers.map((u) => u._id)),
+  },
+  config
+);
       setChats([data, ...chats]);
       onClose();
       toast({

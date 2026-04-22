@@ -44,7 +44,12 @@ const   Sidedrawer = () => {
         Authorization: `Bearer ${user.token}`,
     },
   }
-  const {data}=await axios.post('http://localhost:5000/api/chat',{userId},config)
+  // const {data}=await axios.post('http://localhost:5000/api/chat',{userId},config)
+  const { data } = await axios.post(
+  'https://talkzone-dcbn.onrender.com/api/chat',
+  { userId },
+  config
+);
   if(!chats.find((c)=>c._id === data._id)){
     setChats([data, ...chats]);
   }
@@ -82,7 +87,11 @@ position:"top-left"
         Authorization:`Bearer ${user.token}`
         },
     };
-    const {data}=await axios.get(`http://localhost:5000/api/user?search=${search}`,config)
+    // const {data}=await axios.get(`http://localhost:5000/api/user?search=${search}`,config)
+    const { data } = await axios.get(
+  `https://talkzone-dcbn.onrender.com/api/user?search=${search}`,
+  config
+);
      setLoading(false)
     //  console.log(data)
      setSearchResults(data);

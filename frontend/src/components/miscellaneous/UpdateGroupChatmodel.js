@@ -51,7 +51,8 @@ const UpdateGroupChatModel = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
         },
       };
       const response = await axios.put(
-        "http://localhost:5000/api/chat/groupremove",
+      // "http://localhost:5000/api/chat/groupremove",
+  "https://talkzone-dcbn.onrender.com/api/chat/groupremove",
         {
           chatId: selectedChat._id,
           userId: user1._id,
@@ -107,7 +108,8 @@ const UpdateGroupChatModel = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
           Authorization: `Bearer ${user.token}`
         }
       }
-      const { data } = await axios.put("http://localhost:5000/api/chat/groupadd", {
+      // const { data } = await axios.put("http://localhost:5000/api/chat/groupadd", {
+      const { data } = await axios.put("https://talkzone-dcbn.onrender.com/api/chat/groupadd", {
         chatId: selectedChat._id,
         userId: user1._id
       }, config)
@@ -135,7 +137,8 @@ const UpdateGroupChatModel = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
           Authorization: `Bearer ${user.token}`
         }
       }
-      const { data } = await axios.put(`http://localhost:5000/api/chat/rename`, {
+      // const { data } = await axios.put(`http://localhost:5000/api/chat/rename`, {
+      const { data } = await axios.put(`https://talkzone-dcbn.onrender.com/api/chat/rename`, {
         chatId: selectedChat._id,
         chatName: groupChatName
       }, config)
@@ -167,7 +170,8 @@ const UpdateGroupChatModel = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
           Authorization: `Bearer ${user.token}`
         }
       }
-      const { data } = await axios.get(`http://localhost:5000/api/user?search=${query}`, config)
+      // const { data } = await axios.get(`http://localhost:5000/api/user?search=${query}`, config)
+      const { data } = await axios.get(  `https://talkzone-dcbn.onrender.com/api/user?search=${query}`, config)
       setSearchResult(data)
       setLoading(false)
     } catch (err) {
