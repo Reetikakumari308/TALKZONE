@@ -9,7 +9,8 @@ import "./styles.css";
 import axios from 'axios';
 import io from 'socket.io-client'
 import { ScrollableChat } from './ScrollableChat';
-const ENDPOINT="http://localhost:5000";
+// const ENDPOINT="http://localhost:5000";
+const ENDPOINT="";
 var socket, selectedChatCompare;
 export const SingleChat = ({ fetchAgain, setFetchAgain }) => {
   const [typingTimer, setTypingTimer] = useState(null);
@@ -30,7 +31,7 @@ export const SingleChat = ({ fetchAgain, setFetchAgain }) => {
   }, [selectedChat]);
 
   useEffect(()=>{  
-socket=io(ENDPOINT)
+socket=io()
 socket.emit("setup",user)
 socket.on('connected',()=>setSocketConnected(true))
 socket.on("typing",(data)=>setIsTyping(true))
@@ -64,7 +65,7 @@ socket.on('stop typing',()=>setIsTyping(false))
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.get(`http://localhost:5000/api/message/${selectedChat._id}`, config);
+      const { data } = await axios.get(`/api/message/${selectedChat._id}`, config);
       setMessages(data); 
       setLoading(false);
       socket.emit('join chat', selectedChat._id);
@@ -94,7 +95,7 @@ socket.on('stop typing',()=>setIsTyping(false))
         };
         setNewMessage('');
         const { data } = await axios.post(
-          'http://localhost:5000/api/message',
+          '/api/message',
           { content: newMessage, chatId: selectedChat._id },
           config
         );
