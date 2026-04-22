@@ -12,8 +12,15 @@ const path = require("path");
 dotenv.config()
 connectDB()
 app.use(express.json());
+// app.use(cors({
+//     origin: "http://localhost:3000",
+// }));
 app.use(cors({
-    origin: "http://localhost:3000",
+  origin: [
+    "http://localhost:3000",
+    "https://talkzone-dcbn.onrender.com"
+  ],
+  credentials: true
 }));
 console.log("this is me")
 app.use('/api/user',userRoutes)
